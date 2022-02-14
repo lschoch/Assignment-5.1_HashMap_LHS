@@ -1,10 +1,7 @@
-import java.util.Scanner;
 import java.util.Set;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.util.Iterator;
-import java.util.Random;
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -57,9 +54,14 @@ public class ArchaicWordManager {
 		Set<String> archKeySet = myArchWordDict.getKeySet();
 		Iterator<String> keyIt = archKeySet.iterator();
 		
-		/* Iterate through the keySet and select every 87th (436/5)
-		 * to be printed (to get 5).
+		/* Iterate through the keySet and select every 87th (435/5)
+		 * to get five keys for printing.
 		 */
+		System.out.println("Using HashMap.get to retrieve data.");
+		System.out.println("-----------------------------------");
+		System.out.println("Note hashes calculated two ways, one using the\n"
+				+ " hashCode function and one calulated directly\n using"
+				+ " the \"Horner method\".");
 		int counter = 1;
 		while (keyIt.hasNext()) {
 			nextWord = keyIt.next();
