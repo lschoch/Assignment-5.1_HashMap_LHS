@@ -102,13 +102,13 @@ public class ArchaicWordDictionary {
 		String nextWord = "";
 		Set<String> archKeySet = getKeySet();
 		Iterator<String> keyIt = archKeySet.iterator();
-		str += String.format("    %-18s" + "DEFINITION\n", "ARCHAIC WORD");
-		str += String.format("    %-18s" + "----------\n", "------------");
+		str += String.format("     %-20s" + "DEFINITION\n", "ARCHAIC WORD");
+		str += String.format("     %-20s" + "----------\n", "------------");
 		int i=0;
 		while (keyIt.hasNext()) {
 			nextWord = keyIt.next();
 			i++;
-			str += String.format(" %3d %-18s" + getDefinition(nextWord) + "\n",i, nextWord);
+			str += String.format(" %3d %-20s" + getDefinition(nextWord) + "\n",i, nextWord);
 		}
 		return str;
 	}// end toString
